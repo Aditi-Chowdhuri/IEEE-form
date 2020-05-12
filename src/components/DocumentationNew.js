@@ -4,6 +4,8 @@ import AppBar from 'material-ui/AppBar'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import { Initiation } from './Initiation';
+import { Nav, Tab , Row, Col, Container} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export class DocumentationNew extends Component {
   continue = e => {
@@ -19,12 +21,22 @@ export class DocumentationNew extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
+      <div>
+      <div style={{marginTop: "10px"}}>
+            <Tab.Container defaultActiveKey="first">
+            <Nav className="justify-content-between">
+            <Nav.Item>
+                <Nav.Link eventKey="brand" onClick={this.back}>B</Nav.Link>
+              </Nav.Item>
+              <div className="new2">Documentation</div>
+              <div style={{width:"auto"}}>
+              </div>
+            </Nav>
+            </Tab.Container>
+            </div>
+            <hr className="new1"></hr>
       <MuiThemeProvider>
         <React.Fragment>
-        <AppBar 
-          className="app_bar" 
-          title="Documentation" 
-        />
         <RaisedButton
           className="button_form"
           color="primary"
@@ -46,6 +58,7 @@ export class DocumentationNew extends Component {
         />
         </React.Fragment>
       </MuiThemeProvider>
+      </div>
     );
   }
 }

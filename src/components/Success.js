@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
+import { Nav, Tab , Row, Col, Container} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export class Success extends Component {
   continue = e => {
@@ -16,15 +18,24 @@ export class Success extends Component {
 
   render() {
     return (
+      <div>
+      <div style={{marginTop: "10px"}}>
+            <Tab.Container defaultActiveKey="first">
+            <Nav className="justify-content-between">
+
+              <div className="new2">Success</div>
+              <div style={{width:"auto"}}>
+              </div>
+            </Nav>
+            </Tab.Container>
+            </div>
+            <hr className="new1"></hr>
       <MuiThemeProvider>
       <React.Fragment>
-      <AppBar 
-          className="app_bar" 
-          title="Success" 
-        />
-            <h1>Thank You For Your Submission</h1>
+            <h3>Thank You For Your Submission</h3>
       </React.Fragment>
       </MuiThemeProvider>
+      </div>
     );
   }
 }

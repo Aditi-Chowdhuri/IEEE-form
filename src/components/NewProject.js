@@ -4,6 +4,9 @@ import AppBar from 'material-ui/AppBar'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import './NewProject.css';
+import { Nav, Tab , Row, Col, Container} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export class NewProject extends Component {
   continue = e => {
@@ -15,12 +18,22 @@ export class NewProject extends Component {
     const { values, handleChange } = this.props;
     return (
       <div>
+      <div style={{marginTop: "10px"}}>
+            <Tab.Container defaultActiveKey="first">
+            <Nav className="justify-content-between">
+            <Nav.Item>
+                <Nav.Link eventKey="brand" onClick={this.home}>X</Nav.Link>
+              </Nav.Item>
+              <div className="new2">New project</div>
+              <div style={{width:"auto"}}>
+              </div>
+            </Nav>
+            </Tab.Container>
+            </div>
+            <hr className="new1"></hr>
         <MuiThemeProvider>
         <React.Fragment>
-        <AppBar 
-          className="app_bar" 
-          title="New Project" 
-        />
+        
         <div className="form_text">
         <div className="text">
           Title: 
