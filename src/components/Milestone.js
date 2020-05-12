@@ -57,7 +57,7 @@ export class Milestone extends Component {
         <RaisedButton 
           label="Submit"
           primary={true}
-          className="button_form"
+          className="button_form_mil"
           onClick={this.continue}
         />
         </React.Fragment>

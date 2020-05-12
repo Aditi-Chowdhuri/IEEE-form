@@ -41,13 +41,13 @@ export class DocumentationNew extends Component {
           className="button_form"
           color="primary"
           variant="contained"
-        >Initiation<pre>                                                   </pre></RaisedButton>
+        >Initiation<pre>                                           </pre></RaisedButton>
         
         <RaisedButton
           className="button_form_doc"
           color="primary"
           variant="contained"
-        >+ add a new block<pre>                                                   </pre></RaisedButton>
+        >+ add a new block<pre>                                           </pre></RaisedButton>
         <br />
         
         <RaisedButton 
