@@ -22,6 +22,9 @@ export class Success extends Component {
       <div style={{marginTop: "10px"}}>
             <Tab.Container defaultActiveKey="first">
             <Nav className="justify-content-between">
+            <Nav.Item>
+                <Nav.Link eventKey="brand" onClick={this.home}>X</Nav.Link>
+              </Nav.Item>
 
               <div className="new2">Success</div>
               <div style={{width:"auto"}}>
